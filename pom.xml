@@ -4,7 +4,7 @@
   <groupId>com.nijjwal</groupId>
   <artifactId>SimpleMavenJunitWebApp</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>Simple Maven Junit Webapp</name>
   <url>http://maven.apache.org</url>
   
@@ -12,7 +12,12 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
-  
+  <distributionManagement>
+  <repository>
+      <id>releases</id>
+      <url>http://ec2-3-14-251-87.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/devopstraining/Hemant_Pipeline</url>
+    </repository>
+  </distributionManagement>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -24,10 +29,5 @@
   <build>
     <finalName>SimpleMavenJunitWebApp</finalName>
   </build>
-  <distributionManagement>
-  <repository>
-      <id>releases</id>
-      <url>http://ec2-3-14-251-87.us-east-2.compute.amazonaws.com:8081/nexus/content/repositories/devopstraining/Hemant_Pipeline</url>
-    </repository>
-  </distributionManagement>
+  
 </project>
